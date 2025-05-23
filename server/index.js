@@ -1,6 +1,10 @@
+require('dotenv').config();
+console.log('DATABASE_URL=', process.env.DATABASE_URL);
 const db = require('./db');
+const cors = require('cors');
 const express = require('express');
 const app = express();
+
 app.use(express.json());
 app.use(cors());
 const PORT = process.env.PORT || 4000;
