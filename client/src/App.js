@@ -31,7 +31,8 @@ export default function App() {
           id: slot.id,
           start: new Date(slot.start),
           end: new Date(slot.end),
-          title: slot.title || 'Available',
+          booked: slot.booked,
+          title: slot.booked ? 'Booked' : 'Available',
         }));
         console.log('Parsed events:', parsed);
         setEvents(parsed);
@@ -52,6 +53,15 @@ export default function App() {
       events={events}
       startAccessor="start"
       endAccessor="end"
+      titleAccessor="title"
+      eventPropGetter={event => ({
+        style: {
+          backgroundColor: event.booked ? '#f8d7da' : '#d1ecf1',
+          color: '#000',
+          border: '1px solid #ccc',
+        }
+
+      })}
       defaultDate={new Date(2025, 4, 23)}
       style={{ height: 600, marginTop: 20}}
       />
