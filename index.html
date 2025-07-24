@@ -1,16 +1,178 @@
-<!Doctype HTML>
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Hi, Welcome</title>
-    </head>
-    <body>
-        <h1>Under Construction</h1>
-        <p>The official page of Marand Tutoring</p>
-        <p>For any inquiries please contact Ethan Tasouji at: tasouji@marandtutoring.com</p>
-        <p>                                 Tanya Chevard at: tanya@marandtutoring.com</p>
-        <button onclick="document.location='services.html'">Our Services</button>
-        <button onclick="document.location='contact.html'">Contact</button>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marand Tutoring</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      color: #222;
+      background-color: #fefefe;
+    }
+    h1, h2, h3 {
+      color: #333;
+    }
+    a {
+      color: #5c7cfa;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    section {
+      padding: 3em 1.5em;
+      max-width: 960px;
+      margin: auto;
+    }
+    .btn {
+      background-color: #5c7cfa;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+    .btn:hover {
+      background-color: #4b6cb7;
+      transform: translateY(-2px);
+    }
+    .tutor-card {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      padding: 1em;
+      text-align: center;
+      max-width: 300px;
+    }
+    .tutor-img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+    .faq-item p {
+      display: none;
+      margin-top: 0.5em;
+      color: #333;
+    }
+    .faq-item button {
+      width: 100%;
+      text-align: left;
+      background: none;
+      border: none;
+      font-size: 1.1rem;
+      padding: 0;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .faq-item.open p {
+      display: block;
+    }
+    .faq-item.open span:last-child {
+      transform: rotate(180deg);
+    }
+  </style>
+</head>
+<body>
+  <section id="welcome" style="background-color: #fdfdfd; padding: 4em 1em; text-align: center;">
+    <h1 style="font-size: 2.5em; margin-bottom: 0.5em;">S(t)uck at Math or Coding?</h1>
+    <h2 style="font-weight: normal; color: #333;">Worry not!</h2>
+    <p style="max-width: 600px; margin: 1.5em auto; font-size: 1.2em; line-height: 1.6;">
+      With our personalized support and expert guidance, you’ll be solving problems and writing clean code in no time.<br>
+      At your own pace, in your own style — <strong>Tailored just for you.</strong>
+    </p>
+  </section>
+
+  <section id="meet-the-tutors" data-aos="fade-up" style="text-align: center;">
+    <h2 style="font-size: 2em; margin-bottom: 1em;">Meet the Tutors</h2>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2em;">
+      <div class="tutor-card">
+        <img src="https://i.ibb.co/PsjPr02b/17243.jpg" alt="Ethan" class="tutor-img">
+        <h3>Ethan</h3>
+        <p>Hi, I'm Ethan, undergraduate computer science student at UofT. I've been tutoring for the last two years, mainly specializing in High School and Middle School level calculus and SAT prep. I believe in teaching with weekly plans catered to the pupil's level, need, and goal. And with enough practice and curiosity, math can be a rewarding and enjoyable subject.</p>
+      </div>
+      <div class="tutor-card">
+        <img src="https://i.ibb.co/FkJch4bh/ab38eb01-882c-4445-bd2d-3934acf186cd.jpg" alt="Tanya" class="tutor-img">
+        <h3>Tanya</h3>
+        <p>Hey I'm Tanya, CS and AI student with a passion for coding. Along with Ethan, I've been tutoring Python, C#, Kotlin and many more! I break down the problems so that the student can apply the skills confidently. So excited to delve into the world of software with you!</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="booking" data-aos="fade-up" style="text-align: center;">
+    <h2>Book a Session</h2>
+    <button class="btn" onclick="window.location.href='https://calendly.com/marandtutoring/ethan'">Book with Ethan</button>
+    <button class="btn" onclick="window.location.href='https://calendly.com/marandtutoring/tanya'">Book with Tanya</button>
+  </section>
+
+  <section id="quote" data-aos="fade-up" style="text-align: center; font-style: italic;">
+    <p>"Ethan and Tanya are the best tutors I've ever had." — Every student ever</p>
+  </section>
+
+  <section id="faq" data-aos="fade-up">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq">
+      <div class="faq-item">
+        <button>What subjects do you tutor? <span>▼</span></button>
+        <p>Ethan specializes in high school and middle school math and SAT prep. Tanya focuses on programming languages like Python, Kotlin, and C#.</p>
+      </div>
+      <div class="faq-item">
+        <button>Where do sessions take place? <span>▼</span></button>
+        <p>We offer online tutoring via Zoom. Ethan also provides in-person sessions in Toronto.</p>
+      </div>
+      <div class="faq-item">
+        <button>Is the first session really free? <span>▼</span></button>
+        <p>Yes! Your first session is completely free — it’s our way of getting to know you and your goals.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" data-aos="fade-up" style="background-color: #f0f4f8; padding: 2em 1em; border-top: 1px solid #ccc;">
+    <h2 style="text-align: center;">Contact Us</h2>
+    <p style="text-align: center;">
+      <span style="margin-right: 0.5em;">📧</span><a href="mailto:tasouji@marandtutoring.com">tasouji@marandtutoring.com</a>
+      |
+      <a href="mailto:tanya@marandtutoring.com">tanya@marandtutoring.com</a>
+    </p>
+    <p style="text-align: center;">
+      <a href="https://instagram.com/marand_tutoring" target="_blank" style="margin: 0 0.5em; text-decoration: none;">📷 @marand_tutoring</a>
+      |
+      <a href="https://instagram.com/tanya_chevard" target="_blank">📷 @tanya_chevard</a>
+    </p>
+    <p style="text-align: center;"><span style="color: red; margin-right: 0.3em;">📍</span>1350 Ellesmere Road, Toronto</p>
+    <p style="text-align: center; margin-top: 2em; color: #888; font-size: 0.9em;">&copy; 2025 Marand Tutoring. All rights reserved.</p>
+  </section>
+
+  <script>
+    document.querySelectorAll('.faq-item button').forEach(button => {
+      button.addEventListener('click', () => {
+        const parent = button.parentElement;
+        parent.classList.toggle('open');
+      });
+    });
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8675M77Y6W"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-8675M77Y6W');
+  </script>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true });
+  </script>
+</body>
 </html>
